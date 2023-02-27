@@ -1,15 +1,11 @@
-import React, { useState } from "react";
 import { Box, Button, FormGroup, FormLabel } from "@mui/material";
-import Confetti from "react-confetti";
+import React, { useState } from "react";
+
 import useWindowSize from "react-use/lib/useWindowSize";
 
 function App() {
   const [count, setCount] = useState(0);
   const { width, height } = useWindowSize();
-
-  if (count > 1) {
-    return <Confetti width={width} height={height} numberOfPieces={2000} />;
-  }
 
   return (
     <>
